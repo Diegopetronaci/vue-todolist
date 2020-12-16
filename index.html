@@ -24,10 +24,11 @@
                     </li> -->
                     <li class="d_flex space_between" v-for="elementoLista,index in list">
                         <p>{{elementoLista}}</p>
-                        <div @click="remove(index)" @click="verifica" ><i class="fas fa-times"></i></div>
+                        <div @click="remove(index)"><i class="fas fa-times"></i></div>
                     </li>
                     
                 </ul>
+                <p id="listaVuota" class="text_center"> {{listaVuota}} </p>
             </div>
         </div>
 

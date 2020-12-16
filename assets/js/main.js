@@ -19,6 +19,7 @@
 let todo = new Vue ({
     el: "#app",
     data: {
+        listaVuota: "",
         frase: "",
         list: [
             "buongiorno",
@@ -29,13 +30,17 @@ let todo = new Vue ({
         aggiungiAllaLista () {
             this.list.push(this.frase);
             this.frase = "";
+            if ((this.list.length >= 1)) {
+                this.listaVuota = ""
+            }
         },
         remove (index) {
             this.list.splice(index, 1)
             /* this.$delete(this.list, index) */
             if (this.list.length < 1) {
-                console.log("non ci sono elementi");
-            };
+                /* console.log("non ci sono elementi"); */
+                this.listaVuota = "Hai fatto Tutto!"
+            }
         },
         /* verifica () {
             if (this.list.length < 1) {
