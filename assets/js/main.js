@@ -29,10 +29,18 @@ let todo = new Vue ({
         aggiungiAllaLista () {
             this.list.push(this.frase);
             this.frase = "";
-       },
+        },
         remove (index) {
-        this.$delete(this.list, index)
+            this.list.splice(index, 1)
+            /* this.$delete(this.list, index) */
+        },
+        verifica () {
+            if (this.list.length < 1) {
+                console.log("non ci sono elementi");
+            };
         }
+    },
+    mounted () {
         
     }
-})
+});
