@@ -30,10 +30,8 @@ let todo = new Vue ({
             this.list.push(this.frase);
             this.frase = "";
        },
-        remove () {
-        /* this.$delete(this.groups,{name: this.nameInput});
-        this.nameInput = ''; */
-        
+        remove (index) {
+        this.$delete(this.list, index)
         }
         
     }

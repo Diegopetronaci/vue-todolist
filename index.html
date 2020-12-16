@@ -22,9 +22,9 @@
                         <p>ciao</p>
                         <div><i class="fas fa-times"></i></div>
                     </li> -->
-                    <li class="d_flex space_between" v-for="elementoLista in list">
+                    <li class="d_flex space_between" v-for="elementoLista,index in list">
                         <p>{{elementoLista}}</p>
-                        <div @click="remove" ><i class="fas fa-times"></i></div>
+                        <div @click="remove(index)" ><i class="fas fa-times"></i></div>
                     </li>
                     
                 </ul>
