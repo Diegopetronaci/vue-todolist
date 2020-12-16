@@ -33,12 +33,15 @@ let todo = new Vue ({
         remove (index) {
             this.list.splice(index, 1)
             /* this.$delete(this.list, index) */
-        },
-        verifica () {
             if (this.list.length < 1) {
                 console.log("non ci sono elementi");
             };
-        }
+        },
+        /* verifica () {
+            if (this.list.length < 1) {
+                console.log("non ci sono elementi");
+            };
+        } */
     },
     mounted () {
         
