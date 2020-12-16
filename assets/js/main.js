@@ -2,6 +2,7 @@
 //Create una todo list usando VueJS.
 //Potete dare sfogo alla creativitá e per quanto riguarda l'HTML e il CSS.
 //Se non sapere che fare, di seguito trovate uno screenshot.
+
 //Funzionalitá:
 //La nostra todo list avrá alcune tasks di default predefinite
 //L'utente puó inserire nuove tasks
@@ -18,6 +19,19 @@
 let todo = new Vue ({
     el: "#app",
     data: {
-        list: 
+        frase: "",
+        list: [
+            "buongiorno",
+            "heyla",
+        ]
+    },
+    methods: {
+        aggiungiAllaLista () {
+            this.list.push(this.frase);
+            this.frase = "";
+       },
+       eliminaElemento () {
+           
+       }
     }
 })

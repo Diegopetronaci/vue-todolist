@@ -14,11 +14,19 @@
             <div class="d_flex_col">
                 <img src="./assets/img/logo.png" alt="">
                 <div class="add d_flex">
-                    <input type="text" placeholder=" Aggiungi alla lista ">
-                    <button> ADD </button>
+                    <input id="elementoLista" type="text" placeholder=" Aggiungi alla lista " v-model="frase">
+                    <button @click="aggiungiAllaLista" > ADD </button>
                 </div>
                 <ul>
-                    <li class="d_flex space_between"> <p>Elemento 1</p> <i><i class="fas fa-times"></i></i> </li>
+                    <!-- <li class="d_flex space_between">
+                        <p>ciao</p>
+                        <div><i class="fas fa-times"></i></div>
+                    </li> -->
+                    <li class="d_flex space_between" v-for="elementoLista in list">
+                        <p>{{elementoLista}}</p>
+                        <div @click="eliminaElemento" ><i class="fas fa-times"></i></div>
+                    </li>
+                    
                 </ul>
             </div>
         </div>

@@ -47,13 +47,19 @@ button {
 
 li {
     /* text-align: center; */
+    height: 35px;
     padding-left: 3px;
     list-style: none;
     line-height: 30px;
     vertical-align: middle;
     background-color: greenyellow;
+    border: 1px solid black;
 }
 
-li > i {
+li > div > i {
     padding-right: 5px;
+}
+
+.vertical_align {
+    vertical-align: middle;
 }
