@@ -30,8 +30,8 @@ let todo = new Vue ({
             this.list.push(this.frase);
             this.frase = "";
        },
-       eliminaElemento () {
-           
-       }
+        remove() {
+            
+        }
     }
 })
