@@ -31,7 +31,9 @@ let todo = new Vue ({
             this.frase = "";
        },
         remove() {
-            
+            this.$delete(this.todo, { el: this.frase });
+
+            this.frase = '';
         }
     }
 })
