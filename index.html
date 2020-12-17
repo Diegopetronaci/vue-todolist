@@ -14,7 +14,7 @@
             <div class="d_flex_col">
                 <img src="./assets/img/logo.png" alt="">
                 <div class="add d_flex">
-                    <input id="elementoLista" type="text" placeholder=" Aggiungi alla lista " v-model="frase">
+                    <input id="elementoLista" type="text" @keyup.enter="aggiungiAllaLista" placeholder=" Aggiungi alla lista " v-model="frase">
                     <button @click="aggiungiAllaLista" > ADD </button>
                 </div>
                 <ul>

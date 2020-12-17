@@ -59,11 +59,12 @@ let todo = new Vue ({
             };
         } */
     },
-    mounted () {
+    //cambiato con @keyup.enter="aggiuntaAllaLista" nell'HTML
+    /* mounted () {
         document.addEventListener("keyup", e => {
             if (e.key === "Enter") {
                 this.aggiungiAllaLista()
             }
         })
-    }
+    } */
 });
