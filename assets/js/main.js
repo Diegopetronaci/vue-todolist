@@ -49,6 +49,10 @@ let todo = new Vue ({
         } */
     },
     mounted () {
-        
+        document.addEventListener("keyup", e => {
+            if (e.key === "Enter") {
+                this.aggiungiAllaLista()
+            }
+        })
     }
 });
