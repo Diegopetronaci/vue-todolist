@@ -28,8 +28,19 @@ let todo = new Vue ({
     },
     methods: {
         aggiungiAllaLista () {
-            this.list.push(this.frase);
+            /* this.list.push(this.frase);
             this.frase = "";
+            if ((this.list.length >= 1)) {
+                this.listaVuota = ""
+            } */
+            ////////////////esempio corretto////////////////
+            // esempio let = (operazione)
+            if (this.frase.length >= 3) {
+                this.list.push(this.frase);
+                this.frase = "";
+            } else {
+                alert("inserisci almeno 4 caratteri")
+            }
             if ((this.list.length >= 1)) {
                 this.listaVuota = ""
             }
